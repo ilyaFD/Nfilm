@@ -1,0 +1,142 @@
+.sidebar{
+	background: #363636;
+	height: 100%;
+	width: 380px;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	height: 100%;
+	flex-direction: column;
+	justify-content: space-between;
+	padding-left: 80px;
+	.logo{
+		margin-top: 90px;
+		margin-bottom: 15vh;
+		display: inline-block;
+		img {
+			max-width: 200px;
+			width: 100%;
+		}
+	}
+	nav{
+		.menu{
+			.toogle_sub_menu{
+				cursor: pointer;
+			}
+			li{
+				text-transform: uppercase;
+				font-family: 'Montserrat', sans-serif;
+				font-size: 26px;
+				font-weight: 700;
+				padding-top: 18px;
+				overflow: hidden;
+				.closed{
+					display: none;
+				}
+				.submenu{
+					li{
+						font-family: 'Raleway', sans-serif;
+						font-size: 18px;
+						font-weight: 400;
+						text-transform: none;
+						padding-top: 12px;
+						&:hover{	
+							a {
+								color: #9d9d9d;
+								font-weight: 700;
+							}
+						}
+						a {
+							white-space: nowrap;
+							&.active{
+								color: #fff;
+								font-weight: 700;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.social{
+		margin-bottom: 60px;
+		display: block;
+		display: flex;
+		a {
+			display: block;
+			width: 40px;
+			height: 43px;
+			margin-right: 20px;
+			transition: .3s;
+			&:hover {
+				svg {
+				path {
+					fill: #fff;
+					transition: .3s;
+					}
+				}
+			}
+			svg path {
+				transition: .3s;
+			}
+		}
+	}
+}
+@media (min-width: 1025px) {
+	.sidebar {
+		display: flex !important;
+	}
+}
+@media screen and (max-width: 1024px) {
+	.sidebar{
+		display: none;
+		.logo{
+			display: none !important;
+		}
+		nav {
+			margin-top: 25vh;
+		}
+	}
+}
+@media (max-width: 480px) {
+	.sidebar{
+		nav {
+			margin-top: 20vh;
+			.menu{
+				min-width: 185px;
+				li{
+					font-size: 18px;
+					.submenu{
+						li{
+						    font-size: 14px;
+						    padding-top: 8px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 450px) {
+	.sidebar {
+		width: 100%;
+		align-items: center;
+		padding: 0;
+		.sidebar-center {
+			margin-left: 37px;
+		}
+		.social {
+			margin-left: 10px;
+			a {
+				margin-right: 14px;
+				svg {
+					width: 38px;
+				}
+			}
+		}
+	}
+}
+
+

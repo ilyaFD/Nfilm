@@ -1,0 +1,34 @@
+body, html{
+	height:100%;
+}
+body{
+	color: #fff;
+	font-family: 'Raleway', sans-serif;
+	font-size: 18px;
+	background: #363636;
+}
+* {
+	box-sizing: border-box;
+}
+h1,h2,h3,h4,h5,h6{
+	margin: 0;
+}
+a{
+	color: #fff;
+	outline: none;
+}
+.wrapper{
+	width: 100%;
+	height: 100%;
+	@media (max-width: 1024px) {
+		padding-top: 50px;
+	}
+}
+.project-description, .bio{
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	background: #363636bf;
+	width: 100%;
+	box-sizing: border-box;
+}
